@@ -1,0 +1,105 @@
+Chapter 001. Exercises
+
+1).
+	Q: Where is the bash program located on your system?
+	A: cat /etc/shells
+  
+2).
+	Q: Use the --version option to find out which version you are running.
+	A: bash --version
+  
+3).
+	Q: Which shell configuration files are read when you login to your system using the graphical user interface and then opening a terminal window?
+	A: cat /etc/profile
+	   cat ~/.bash_profile
+	   cat ~/.bashrc
+
+4).
+	Q: Are the following shells interactive shells? Are they login shells?
+		1. A shell opened by clicking on the background of your graphical desktop, selecting "Terminal" or such from a menu.
+		2. A shell that you get after issuing the command ssh localhost.
+		3. A shell that you get when logging in to the console in text mode.
+		4. A shell obtained by the command xterm &.
+		5. A shell opened by the mysystem.sh script.
+		6. A shell that you get on a remote host, for which you didn't have to give the login and/or password because you use SSH and maybe SSH keys.
+	A:  
+	
+	Invoked as an interactive login shell, or with `--login'. 
+		Interactive means you can enter commands. The shell is not running because a script has been activated. A login shell means that you got the shell after authenticating to the system, usually by giving your user name and password. 
+		Files read:
+			/etc/profile
+			~/.bash_profile, ~/.bash_login or ~/.profile: first existing readable file is read
+			~/.bash_logout upon logout.
+		Error messages are printed if configuration files exist but are not readable. If a file does not exist, bash searches for the next.
+
+
+	Invoked as an interactive non-login shell.
+		A non-login shell means that you did not have to authenticate to the system. For instance, when you open a terminal using an icon, or a menu item, that is a non-login shell.
+		Files read:
+		~/.bashrc
+	This file is usually referred to in ~/.bash_profile:
+			if [ -f ~/.bashrc ]; then . ~/.bashrc; fi
+
+
+	Invoked non-interactively.
+		All scripts use non-interactive shells. They are programmed to do certain tasks and cannot be instructed to do other jobs than those for which they are programmed.
+		Files read:
+			defined by BASH_ENV
+		PATH is not used to search for this file, so if you want to use it, best refer to it by giving the full path and file name.
+
+
+	Invoked with the sh command.
+		Bash tries to behave as the historical Bourne sh program while conforming to the POSIX standard as well.
+		Files read:
+			/etc/profile
+			~/.profile
+		When invoked interactively, the ENV variable can point to extra startup information.
+
+	
+	POSIX mode.
+		This option is enabled either using the set built-in:
+			set -o posix
+		or by calling the bash program with the --posix option. Bash will then try to behave as compliant as possible to the POSIX standard for shells. Setting the POSIXLY_CORRECT variable does the same.
+		Files read:
+			defined by ENV variable.
+
+
+	Invoked remotely.
+		Files read when invoked by rshd:
+			~/.bashrc
+		Be aware of the dangers when using tools such as rlogin, telnet, rsh and rcp. They are intrinsically insecure because confidential data is sent over the network unencrypted. If you need tools for remote execution, file transfer and so on, use an implementation of Secure SHell, generally known as SSH, freely available from http://www.openssh.org. Different client programs are available for non-UNIX systems as well, see your local software mirror.
+
+
+	Invoked when UID is not equal to EUID.
+		No startup files are read in this case.
+
+
+5).
+	Q: Can you explain why bash does not exit when you type Ctrl+C on the command line?
+	A: Because of interactive mode. In the interactive mode, in the absence of traps, SIGINT is caught and handled. Thus, typing Ctrl+C, for example, will not quit your interactive shell.
+
+
+6).
+	Q: Display directory stack content.
+	A: dirs
+
+
+7).
+	Q: If it is not yet the case, set your prompt so that it displays your location in the file system hierarchy, for instance add this line to ~/.bashrc:
+		export PS1="\u@\h \w> " 
+
+
+8).
+	Q: Display hashed commands for your current shell session.
+	A: hash
+
+
+9).
+	Q: How many processes are currently running on your system? Use ps and wc, the first line of output of ps is not a process!
+	A: ...
+
+10). 
+	Q: How to display the system hostname? Only the name, nothing more!
+	A: echo "$HOSTNAME"
+
+
