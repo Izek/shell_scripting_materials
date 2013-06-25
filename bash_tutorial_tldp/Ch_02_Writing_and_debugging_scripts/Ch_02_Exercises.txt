@@ -1,0 +1,55 @@
+Chapter 02. Exercises.
+
+1).
+	Q: Write a script using your favorite editor. The script should display the path to your homedirectory and the terminal type that you are using. Additionally it shows all the services started up in runlevel 3 on your system. (hint: use HOME, TERM and ls /etc/rc3.d/S*)
+	A:
+
+			#!/bin/bash
+
+			# Chapter 002. Exercise 001:
+
+			# Task: Write a script using your favorite editor. The script should display the path to your homedirectory and the terminal type that you are using. Additionall$
+
+			#Clearing screen...
+			clear
+
+			echo "Now displaing path of user's home derictory..."
+			echo "User's '$USER' home directory is '$HOME'"
+			echo
+
+			echo "Now displaying terminal type..."
+			echo "The terminal under which this script is runned is: '$TERM'"
+			echo
+
+			echo "Now the services of runlevel 3 are shown..."
+			ls /etc/rc3.d/S*
+			echo
+
+			echo "Done!.."
+			echo "Have a nice day! =)"
+
+
+2).
+	Q: Add comments in your script.
+	A: See 1). A:
+
+
+3).
+	Q: Add information for the users of your script.
+	A: See 1). A:
+
+
+4).
+	Q: Change permissions on your script so that you can run it.
+	A: ???
+
+
+5).
+	Q: Run the script in normal mode and in debug mode. It should run without errors.
+	A: bash Ch_02_Ex_001.sh
+		bash -x Ch_02_Ex_001.sh
+
+
+6).
+	Q: Make errors in your script: see what happens if you misspell commands, if you leave out the first line or put something unintelligible there, or if you misspell shell variable names or write them in lower case characters after they have been declared in capitals. Check what the debug comments say about this.
+	A:
