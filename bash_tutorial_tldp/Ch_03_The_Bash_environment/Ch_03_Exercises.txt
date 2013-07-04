@@ -1,0 +1,44 @@
+Chapter 03. Exercises.
+
+1).
+	Q: Create 3 variables, VAR1, VAR2 and VAR3; initialize them to hold the values "thirteen", "13" and "Happy Birthday" respectively.
+	A: See Ch_03_Ex_001.sh
+	
+	
+2).
+	Q: Display the values of all three variables.
+	A: See Ch_03_Ex_001.sh
+	
+	
+3).
+	Q: Are these local or global variables?
+	A: These variables are local beacuse they're not exported by |export VARNAME="value"| command.
+	
+	
+4).
+	Q: Remove VAR3.
+	A: I won't...
+	
+	
+5).
+	Q: Can you see the two remaining variables in a new terminal window?
+	A: No...
+	
+	
+6).
+	Q: Edit /etc/profile so that all users are greeted upon login (test this).
+	A: cat /etc/profile
+	
+	
+7).
+	Q: For the root account, set the prompt to something like "Danger!! root is doing stuff in \w", preferably in a bright color such as red or pink or in reverse video mode.
+	A: cat /root/.bashrc	Implemented fully .
+	
+8).
+	Q: Make sure that newly created users also get a nice personalized prompt which informs them on which system in which directory they are working. Test your changes by adding a new user and logging in as that user.
+	A: ???
+	
+	
+9).
+	Q: Write a script in which you assign two integer values to two variables. The script should calculate the surface of a rectangle which has these proportions. It should be aired with comments and generate elegant output.
+	A: See Ch_03_009.sh
