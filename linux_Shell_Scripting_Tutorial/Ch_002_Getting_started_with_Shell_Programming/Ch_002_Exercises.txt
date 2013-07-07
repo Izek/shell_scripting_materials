@@ -1,0 +1,56 @@
+Chapter 002. Exercises:
+
+Q.1: How to Define variable x with value 10 and print it on screen.
+A.1: 	x=10
+	echo $x
+
+
+Q.2: How to Define variable xn with value Rani and print it on screen
+A.2:	xn=Rani
+	echo $xn
+
+
+Q.3: How to print sum of two numbers, let's say 6 and 3?
+A.3: 	expr 6 + 3
+
+
+Q.4: How to define two variable x=20, y=5 and then to print division of x and y (i.e. x/y)
+A.4:	x=20
+	y=5
+
+	expr $x / $y
+
+
+
+Q.5: Modify above and store division of x and y to variable called z
+A:5:	x=20
+	y=5
+	let "z=x/y"
+
+	echo $z
+
+Q.6: Point out error if any in following script:
+
+#
+#
+# Script to test MY knowledge about variables!
+#
+myname=Vivek
+myos = TroubleOS
+myno=5
+echo "My name is $myname"
+echo "My os is $myos"
+echo "My number is myno, can you see this number"
+
+
+A.6:
+	#
+	# Script to test MY knowledge about variables!
+	#
+	myname=Vivek
+	myos=TroubleOS
+	myno=5
+	echo "My name is $myname"
+	echo "My os is $myos"
+	echo "My number is $myno, can you see this number"
+
