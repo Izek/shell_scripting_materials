@@ -1,0 +1,5 @@
+Chapter 04. Exercises.
+
+1).
+	Q: Print a list of files in your scripts directory, ending in ".sh". Mind that you might have to unalias ls. Put the result in a temporary file.
+	A: 

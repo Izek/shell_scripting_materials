@@ -1,0 +1,9 @@
+total 24
+drwxrwxr-x 2 shum shum 4096 Jul  6 19:49 .
+drwxrwxr-x 8 shum shum 4096 Jul  6 15:33 ..
+-rw-rw-r-- 1 shum shum  217 Jul  6 15:52 example
+-rw-rw-r-- 1 shum shum  221 Jul  6 19:18 example_corrected
+-rw-rw-r-- 1 shum shum    0 Jul  6 19:49 file_list.txt
+-rw-rw-r-- 1 shum shum  121 Jul  6 19:24 script.sed
+-rw-rw-r-- 1 shum shum    0 Jul  6 19:44 test
+-rw-rw-r-- 1 shum shum  525 Jul  6 19:44 txt2html.sh
